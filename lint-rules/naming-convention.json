@@ -127,6 +127,10 @@
         "@typescript-eslint/naming-convention": [
           "error",
           {
+            "filter": {
+              "match": false,
+              "regex": "^metadata$"
+            },
             "format": ["StrictPascalCase"],
             "modifiers": ["exported"],
             "selector": ["function", "variable"],

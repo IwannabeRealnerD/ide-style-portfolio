@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: "Create Next App",
 };
 
-console.log("hi");
 const RootLayout = (
   props: Readonly<{
     children: React.ReactNode;
