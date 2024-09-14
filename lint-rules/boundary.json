@@ -1,0 +1,62 @@
+{
+  "plugins": ["boundaries"],
+  "rules": {
+    "boundaries/element-types": [
+      "error",
+      {
+        "default": "allow",
+        "rules": [
+          {
+            "disallow": ["app"],
+            "from": "apis"
+          },
+          {
+            "disallow": ["app"],
+            "from": "hooks"
+          },
+          {
+            "disallow": ["app"],
+            "from": "types"
+          },
+          {
+            "disallow": ["app"],
+            "from": "utils"
+          },
+          {
+            "disallow": ["app"],
+            "from": "constants"
+          },
+          {
+            "disallow": ["app"],
+            "from": "components"
+          },
+          {
+            "disallow": ["app"],
+            "from": "styles"
+          }
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "boundaries/elements": [
+      {
+        "pattern": "src/apis",
+        "type": "apis"
+      },
+      {
+        "pattern": "src/hooks",
+        "type": "hooks"
+      },
+      {
+        "pattern": "src/components",
+        "type": "components"
+      },
+      { "pattern": "src/constants", "type": "constants" },
+      { "pattern": "src/types", "type": "types" },
+      { "pattern": "src/utils", "type": "utils" },
+      { "pattern": "src/app", "type": "app" },
+      { "pattern": "src/styles", "type": "styles" }
+    ]
+  }
+}

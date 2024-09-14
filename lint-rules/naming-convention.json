@@ -1,0 +1,244 @@
+{
+  "overrides": [
+    {
+      "files": "src/constants/**/*.+(ts|tsx)",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["UPPER_CASE"],
+            "modifiers": ["exported"],
+            "prefix": ["GLOBAL_"],
+            "selector": "variable"
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/utils/**/*.+(ts|tsx)",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "prefix": ["global"],
+            "selector": ["function", "variable"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/hooks/**/*.+(ts|tsx)",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "prefix": ["useGlobal"],
+            "selector": ["function", "variable"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/types/**/*.+(ts|tsx)",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "prefix": ["Global"],
+            "selector": ["typeAlias", "interface"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/components/**/*.+(ts|tsx)",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "prefix": ["Global"],
+            "selector": ["variable", "function"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/apis/**/*.+(ts|tsx)",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "prefix": ["useGlobalGet", "useGlobalPost", "useGlobalDelete", "useGlobalPatch"],
+            "selector": ["function", "variable"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/pages/**/**.page.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["page"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/page.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["Page"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/layout.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["Layout"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/loading.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["Loading"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/not-found.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["NoutFound"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/error.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["Error"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/global-error.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["Layout"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/route.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["Route"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/template.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["Template"]
+          }
+        ]
+      }
+    },
+    {
+      "files": "src/app/**/default.tsx",
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["StrictPascalCase"],
+            "modifiers": ["exported"],
+            "selector": ["function", "variable"],
+            "suffix": ["Default"]
+          }
+        ]
+      }
+    }
+  ]
+}
