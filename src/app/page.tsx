@@ -1,4 +1,5 @@
-const IndexPage = () => {
-  <main>index page</main>;
+const Page = () => {
+  return <div>should be drown</div>;
 };
-export default IndexPage;
+
+export default Page;

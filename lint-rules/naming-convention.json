@@ -61,7 +61,7 @@
       }
     },
     {
-      "files": "src/components/**/*.+(ts|tsx)",
+      "files": "src/components/**/*.tsx",
       "plugins": ["@typescript-eslint"],
       "rules": {
         "@typescript-eslint/naming-convention": [

@@ -10,7 +10,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  pageExtensions: ["page.tsx", "page.ts"],
+  // TODO - should be removed in nextjs-starter-kit for app router option
+  // pageExtensions: ["page.tsx", "page.ts"],
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
