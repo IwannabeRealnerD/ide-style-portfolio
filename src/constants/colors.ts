@@ -1,0 +1,7 @@
+export const GLOBAL_COLORS = {
+  DEEP_NAVY: "#011627",
+  LIGHT_GREY: "#607B96",
+  LINE: "#1E2D3D",
+  ORANGE: "#FEA55F",
+  WHITE: "#FFFFFF",
+};
