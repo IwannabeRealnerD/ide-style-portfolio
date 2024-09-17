@@ -22,7 +22,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={firaCode.className} style={{ backgroundColor: "#010C15" }}>
+      <body className={firaCode.className} style={{ backgroundColor: "#010C15", minWidth: "360px" }}>
         <GlobalLayout>{children}</GlobalLayout>
       </body>
     </html>

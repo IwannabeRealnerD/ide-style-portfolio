@@ -1,6 +1,7 @@
 import { globalStyle, style } from "@vanilla-extract/css";
 
 import { GLOBAL_COLORS } from "@/constants/colors";
+import { globalResponsiveStyle } from "@/utils/responsiveStyls";
 
 export const wrapper = style({
   backgroundColor: GLOBAL_COLORS.DEEP_NAVY,
@@ -8,6 +9,13 @@ export const wrapper = style({
   borderRadius: 10,
   margin: "2.5rem",
   overflow: "hidden",
+  ...globalResponsiveStyle({
+    mobile: {
+      margin: 0,
+    },
+    pc: { margin: "2.5rem" },
+    tablet: { margin: "1.25rem" },
+  }),
 });
 
 export const headerWrapper = style({
@@ -21,8 +29,8 @@ export const headerWrapper = style({
 
 export const nameContainer = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
+  flexShrink: 0,
   height: "100%",
-  minWidth: "13rem",
   padding: "1.125rem 1.375rem",
   width: "15rem",
 });
