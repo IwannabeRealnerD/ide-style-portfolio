@@ -139,7 +139,6 @@ table {
 a {
   color: inherit; /* blue colors for links too */
   text-decoration: none; /* no underline */
-  display: block;
 }
 button {
   background-color: transparent;

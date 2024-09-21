@@ -1,82 +1,64 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
-import { RiFolder3Fill, RiTriangleFill } from "@remixicon/react";
-import clsx from "clsx";
-
-import { GLOBAL_COLORS } from "@/constants/colors";
-
-import { MenuLink } from "./component";
-import * as styles from "./layout.css";
+import { PERSONAL_INFO_MENU, PROFESSIONAL_INFO_MENU } from "./layout/constant";
+import { ContactPart } from "./layout/part/ContactPart";
+import { DirectoryPart } from "./layout/part/DirectoryPart";
+import * as styles from "./layout/part/DirectoryPart/layout.css";
 
 interface OpenedMenu {
-  personalInfo: boolean;
-  contacts: boolean;
+  personalInfo: boolean | null;
+  professionalInfo: boolean | null;
 }
 
 const AboutLayout = () => {
   const [openedMenu, setOpenedMenu] = useState<OpenedMenu>({
-    contacts: false,
-    personalInfo: false,
+    personalInfo: null,
+    professionalInfo: null,
   });
+
+  const pathname = usePathname();
+
+  if (pathname.includes("professional-info") && openedMenu.professionalInfo === null) {
+    setOpenedMenu((prev) => ({
+      ...prev,
+      professionalInfo: true,
+    }));
+  }
+  if (pathname.includes("personal-info") && openedMenu.personalInfo === null) {
+    setOpenedMenu((prev) => ({
+      ...prev,
+      personalInfo: true,
+    }));
+  }
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <div className={styles.sideIconWrapper}>
-          <button type="button">T</button>
-          <button type="button">O</button>
-          <button type="button">G</button>
-        </div>
-        <div className={styles.dropdownContainer}>
-          <div>
-            <button
-              className={styles.dropdownButton}
-              type="button"
-              onClick={() =>
-                setOpenedMenu((prev) => ({
-                  ...prev,
-                  personalInfo: !prev.personalInfo,
-                }))
-              }
-            >
-              <div className={clsx(!openedMenu.personalInfo && styles.closedMenuIcon)}>
-                <RiTriangleFill />
-              </div>
-              personalInfo
-            </button>
-            {openedMenu.personalInfo && (
-              <MenuLink
-                icon={<RiFolder3Fill color={GLOBAL_COLORS.PEACH} />}
-                link="/personalInfo"
-                title="personalInfo"
-              />
-            )}
-          </div>
-          <div>
-            <button
-              className={styles.dropdownButton}
-              type="button"
-              onClick={() =>
-                setOpenedMenu((prev) => ({
-                  ...prev,
-                  contacts: !prev.contacts,
-                }))
-              }
-            >
-              <div className={clsx(!openedMenu.personalInfo && styles.closedMenuIcon)}>
-                <RiTriangleFill />
-              </div>
-              contacts
-            </button>
-            {openedMenu.contacts && (
-              <div>
-                <MenuLink icon={<RiFolder3Fill color={GLOBAL_COLORS.PEACH} />} link="/contacts" title="contacts" />
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
+      <DirectoryPart
+        directoryName="professional-info"
+        isOpened={openedMenu.professionalInfo ?? false}
+        menus={PROFESSIONAL_INFO_MENU}
+        onClick={() =>
+          setOpenedMenu((prev) => ({
+            ...prev,
+            professionalInfo: !prev.professionalInfo,
+          }))
+        }
+      />
+      <DirectoryPart
+        directoryName="personal-info"
+        isOpened={openedMenu.personalInfo ?? false}
+        menus={PERSONAL_INFO_MENU}
+        onClick={() =>
+          setOpenedMenu((prev) => ({
+            ...prev,
+            personalInfo: !prev.personalInfo,
+          }))
+        }
+      />
+      <ContactPart />
     </div>
   );
 };

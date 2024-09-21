@@ -1,16 +1,19 @@
 import { GLOBAL_INTERNAL_URL } from "@/constants/urls";
 
-export const links = [
+export const NAV_LINKS = [
   {
     href: GLOBAL_INTERNAL_URL.INDEX,
-    label: "hello.tsx",
+    label: "home",
+    rootLink: GLOBAL_INTERNAL_URL.INDEX,
   },
   {
-    href: GLOBAL_INTERNAL_URL.ABOUT,
+    href: GLOBAL_INTERNAL_URL.ABOUT.PROFESSIONAL_INFO.WORK,
     label: "about-me.tsx",
+    rootLink: GLOBAL_INTERNAL_URL.ABOUT.INDEX,
   },
   {
-    href: GLOBAL_INTERNAL_URL.PROJECTS,
+    href: GLOBAL_INTERNAL_URL.PROJECTS.INDEX,
     label: "project.tsx",
+    rootLink: GLOBAL_INTERNAL_URL.PROJECTS.INDEX,
   },
 ];

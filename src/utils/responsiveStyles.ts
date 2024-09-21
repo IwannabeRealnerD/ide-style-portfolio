@@ -1,6 +1,6 @@
 import { StyleRule } from "@vanilla-extract/css";
 
-const kycMobileStyle = (rule: StyleRule) => {
+const mobileStyle = (rule: StyleRule) => {
   return {
     "screen and (max-width: 480px)": {
       ...rule,
@@ -8,7 +8,7 @@ const kycMobileStyle = (rule: StyleRule) => {
   };
 };
 
-const kycTabletStyle = (rule: StyleRule) => {
+const tabletStyle = (rule: StyleRule) => {
   return {
     "screen and (min-width: 481px) and (max-width: 1199px)": {
       ...rule,
@@ -16,7 +16,7 @@ const kycTabletStyle = (rule: StyleRule) => {
   };
 };
 
-const kycPcStyle = (rule: StyleRule) => {
+const pcStyle = (rule: StyleRule) => {
   return {
     "screen and (min-width: 1200px)": {
       ...rule,
@@ -33,9 +33,9 @@ interface KycResponsiveStyleParams {
 export const globalResponsiveStyle = ({ pc, tablet, mobile }: KycResponsiveStyleParams) => {
   return {
     "@media": {
-      ...(mobile && kycMobileStyle(mobile)),
-      ...(tablet && kycTabletStyle(tablet)),
-      ...(pc && kycPcStyle(pc)),
+      ...(mobile && mobileStyle(mobile)),
+      ...(tablet && tabletStyle(tablet)),
+      ...(pc && pcStyle(pc)),
     },
   };
 };
