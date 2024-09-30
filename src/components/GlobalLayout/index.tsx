@@ -4,9 +4,10 @@ import { FunctionComponent, ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { RiGithubFill, RiTwitterFill } from "@remixicon/react";
+import clsx from "clsx";
+import { RiGithubFill, RiTwitterFill } from "react-icons/ri";
 
-import { links } from "./constant";
+import { NAV_LINKS } from "./constant";
 import * as styles from "./style.css";
 
 interface GlobalLayoutProps {
@@ -16,6 +17,13 @@ interface GlobalLayoutProps {
 export const GlobalLayout: FunctionComponent<GlobalLayoutProps> = (props) => {
   const pathname = usePathname();
 
+  const isActiveNavLink = (link: (typeof NAV_LINKS)[number]) => {
+    if (link.rootLink === "/") {
+      return pathname === link.href;
+    }
+    return pathname.includes(link.rootLink);
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.headerWrapper}>
@@ -23,14 +31,22 @@ export const GlobalLayout: FunctionComponent<GlobalLayoutProps> = (props) => {
           <p>iwannaberealnerd</p>
         </div>
         <nav className={styles.navContainer}>
-          {links.map((link) => (
-            <div className={styles.navLink}>
-              <Link key={link.href} href={link.href}>
-                {link.label}
-                {pathname === link.href && <div className={styles.activeNavLink} />}
-              </Link>
-            </div>
-          ))}
+          {NAV_LINKS.map((link) => {
+            return (
+              <div key={link.href} className={styles.navLinkWrapper}>
+                <Link
+                  className={clsx(
+                    styles.navLink,
+                    isActiveNavLink(link) ? styles.activeNavLink : styles.inActiveNavLink
+                  )}
+                  href={link.href}
+                >
+                  {link.label}
+                  {isActiveNavLink(link) && <div className={styles.activeNavBar} />}
+                </Link>
+              </div>
+            );
+          })}
         </nav>
       </div>
       {props.children}

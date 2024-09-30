@@ -1,12 +1,13 @@
 import { globalStyle, style } from "@vanilla-extract/css";
 
 import { GLOBAL_COLORS } from "@/constants/colors";
-import { globalResponsiveStyle } from "@/utils/responsiveStyls";
+import { globalResponsiveStyle } from "@/utils/responsiveStyles";
 
 export const wrapper = style({
   backgroundColor: GLOBAL_COLORS.DEEP_NAVY,
   border: `1px solid ${GLOBAL_COLORS.LINE}`,
   borderRadius: 10,
+  height: "calc(100svh - 5rem)",
   margin: "2.5rem",
   overflow: "hidden",
   ...globalResponsiveStyle({
@@ -43,12 +44,12 @@ export const navContainer = style({
   display: "flex",
   height: "100%",
 });
-export const navLink = style({
+
+export const navLinkWrapper = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
 });
-globalStyle(`${navLink} a`, {
+export const navLink = style({
   alignItems: "center",
-  color: GLOBAL_COLORS.LIGHT_GREY,
   display: "flex",
   fontSize: "1rem",
   height: "100%",
@@ -57,7 +58,16 @@ globalStyle(`${navLink} a`, {
   position: "relative",
   width: "100%",
 });
+
+export const inActiveNavLink = style({
+  color: GLOBAL_COLORS.LIGHT_GREY,
+});
+
 export const activeNavLink = style({
+  color: GLOBAL_COLORS.WHITE,
+});
+
+export const activeNavBar = style({
   backgroundColor: GLOBAL_COLORS.ORANGE,
   bottom: 0,
   height: ".25rem",
@@ -96,6 +106,10 @@ export const footerIconWrapper = style({
   justifyContent: "center",
   width: "3.5rem",
 });
+globalStyle(`${footerIconWrapper} svg`, {
+  height: "1.2rem",
+  width: "1.2rem",
+});
 
 export const leftContainer = style({
   display: "flex",
@@ -114,4 +128,9 @@ export const githubInfoContainer = style({
   height: "100%",
   justifyContent: "center",
   padding: "0 1.5rem",
+});
+
+globalStyle(`${githubInfoContainer} svg`, {
+  height: "1.2rem",
+  width: "1.2rem",
 });
