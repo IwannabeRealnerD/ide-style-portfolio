@@ -7,6 +7,7 @@ export const wrapper = style({
   backgroundColor: GLOBAL_COLORS.DEEP_NAVY,
   border: `1px solid ${GLOBAL_COLORS.LINE}`,
   borderRadius: 10,
+  height: "calc(100svh - 5rem)",
   margin: "2.5rem",
   overflow: "hidden",
   ...globalResponsiveStyle({

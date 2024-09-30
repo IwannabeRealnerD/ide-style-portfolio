@@ -8,12 +8,12 @@ export const NAV_LINKS = [
   },
   {
     href: GLOBAL_INTERNAL_URL.ABOUT.PROFESSIONAL_INFO.WORK,
-    label: "about-me.tsx",
+    label: "about-me",
     rootLink: GLOBAL_INTERNAL_URL.ABOUT.INDEX,
   },
   {
     href: GLOBAL_INTERNAL_URL.PROJECTS.INDEX,
-    label: "project.tsx",
+    label: "project",
     rootLink: GLOBAL_INTERNAL_URL.PROJECTS.INDEX,
   },
 ];
