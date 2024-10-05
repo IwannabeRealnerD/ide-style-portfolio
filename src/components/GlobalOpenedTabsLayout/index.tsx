@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode, FunctionComponent, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -85,7 +87,7 @@ export const GlobalOpenedTabsLayout: FunctionComponent<GlobalOpenedTabsLayoutPro
             );
           })}
         </div>
-        <div>{props.pageContent}</div>
+        <div className={styles.pageContentWrapper}>{props.pageContent}</div>
       </div>
     </div>
   );

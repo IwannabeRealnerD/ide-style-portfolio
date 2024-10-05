@@ -49,7 +49,7 @@ export const GlobalLayout: FunctionComponent<GlobalLayoutProps> = (props) => {
           })}
         </nav>
       </div>
-      {props.children}
+      <div className={styles.contentWrapper}>{props.children}</div>
       <div className={styles.footerWrapper}>
         <div className={styles.leftContainer}>
           <div className={styles.footerTextWrapper}>
