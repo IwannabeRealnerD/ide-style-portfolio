@@ -13,7 +13,7 @@ export const NAV_LINKS = [
   },
   {
     href: GLOBAL_INTERNAL_URL.PROJECTS.INDEX,
-    label: "project",
+    label: "projects",
     rootLink: GLOBAL_INTERNAL_URL.PROJECTS.INDEX,
   },
 ];
