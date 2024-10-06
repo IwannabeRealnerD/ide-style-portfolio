@@ -3,7 +3,7 @@ import { globalStyle, style } from "@vanilla-extract/css";
 import { GLOBAL_COLORS } from "@/constants/colors";
 import { GLOBAL_STYLE } from "@/constants/style";
 
-export const container = style({ display: "flex" });
+export const container = style({ display: "flex", height: "100%" });
 
 export const wrapper = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
@@ -13,6 +13,8 @@ export const wrapper = style({
 });
 
 export const verticalContainer = style({
+  display: "flex",
+  flexDirection: "column",
   width: "100%",
 });
 
@@ -53,4 +55,9 @@ export const closeButton = style({
 globalStyle(`${closeButton} > svg`, {
   height: "1.125rem",
   width: "1.125rem",
+});
+
+export const pageContentWrapper = style({
+  display: "flex",
+  flex: 1,
 });

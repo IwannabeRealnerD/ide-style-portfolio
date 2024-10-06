@@ -7,6 +7,8 @@ export const wrapper = style({
   backgroundColor: GLOBAL_COLORS.DEEP_NAVY,
   border: `1px solid ${GLOBAL_COLORS.LINE}`,
   borderRadius: 10,
+  display: "flex",
+  flexDirection: "column",
   height: "calc(100svh - 5rem)",
   margin: "2.5rem",
   overflow: "hidden",
@@ -74,6 +76,10 @@ export const activeNavBar = style({
   left: 0,
   position: "absolute",
   width: "100%",
+});
+
+export const contentWrapper = style({
+  flexGrow: 1,
 });
 
 export const footerWrapper = style({
