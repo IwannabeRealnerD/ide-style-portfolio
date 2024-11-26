@@ -78,9 +78,6 @@ export const activeNavBar = style({
 });
 
 export const contentWrapper = style({
-  // backgroundColor: "gray",
-  // flexGrow: 1,
-  // overflow: "auto",
   height: "calc(100% - 6.125rem)",
 });
 
