@@ -32,7 +32,6 @@ export const headerWrapper = style({
 export const nameContainer = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   flexShrink: 0,
-  height: "100%",
   padding: "1.125rem 1.375rem",
   width: "15rem",
 });
@@ -94,7 +93,6 @@ export const footerTextWrapper = style({
   alignItems: "center",
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   display: "flex",
-  height: "100%",
   justifyContent: "center",
   width: "9.125rem",
 });
@@ -108,7 +106,6 @@ export const footerIconWrapper = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   color: GLOBAL_COLORS.LIGHT_GREY,
   display: "flex",
-  height: "100%",
   justifyContent: "center",
   width: "3.5rem",
 });
@@ -131,7 +128,6 @@ export const githubInfoContainer = style({
   color: GLOBAL_COLORS.LIGHT_GREY,
   display: "flex",
   gap: ".375rem",
-  height: "100%",
   justifyContent: "center",
   padding: "0 1.5rem",
 });

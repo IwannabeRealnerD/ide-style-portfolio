@@ -15,7 +15,6 @@ export const wrapper = style({
 export const verticalContainer = style({
   display: "flex",
   flexDirection: "column",
-  height: "100%",
   width: "100%",
 });
 
@@ -33,7 +32,6 @@ export const tabWrapper = style({
 export const tab = style({
   alignItems: "center",
   display: "flex",
-  height: "100%",
   padding: "0 .75rem 0 .875rem",
 });
 
@@ -49,7 +47,6 @@ export const closeButton = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   color: GLOBAL_COLORS.LIGHT_GREY,
   display: "flex",
-  height: "100%",
   padding: "0 .75rem",
   width: "100%",
 });
