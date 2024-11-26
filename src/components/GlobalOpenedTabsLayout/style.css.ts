@@ -15,12 +15,14 @@ export const wrapper = style({
 export const verticalContainer = style({
   display: "flex",
   flexDirection: "column",
+  height: "100%",
   width: "100%",
 });
 
 export const recentVisitTabWrapper = style({
   borderBottom: `1px solid ${GLOBAL_COLORS.LINE}`,
   display: "flex",
+  flexShrink: 0,
   height: "2.5rem",
 });
 
@@ -60,4 +62,5 @@ globalStyle(`${closeButton} > svg`, {
 export const pageContentWrapper = style({
   display: "flex",
   flex: 1,
+  height: "100%",
 });
