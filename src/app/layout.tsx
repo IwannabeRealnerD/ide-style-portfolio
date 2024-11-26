@@ -1,10 +1,14 @@
+import "@/styles/globals.css";
+
 import React from "react";
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 
+import clsx from "clsx";
+
 import { GlobalLayout } from "@/components/GlobalLayout";
 
-import "@/styles/globals.css";
+import * as styles from "./layout.css";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -23,7 +27,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={firaCode.className} style={{ backgroundColor: "#010C15", minWidth: "360px" }}>
+      <body className={clsx(firaCode.className, styles.rootContainer)}>
         <GlobalLayout>{children}</GlobalLayout>
       </body>
     </html>

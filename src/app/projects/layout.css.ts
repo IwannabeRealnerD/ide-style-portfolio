@@ -3,9 +3,13 @@ import { globalStyle, style } from "@vanilla-extract/css";
 import { GLOBAL_COLORS } from "@/constants/colors";
 import { GLOBAL_STYLE } from "@/constants/style";
 
+export const container = style({
+  display: "flex",
+});
+
 export const wrapper = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
-  height: "100%",
+  flexShrink: 0,
   width: GLOBAL_STYLE.SIDE_BAR_WIDTH,
 });
 

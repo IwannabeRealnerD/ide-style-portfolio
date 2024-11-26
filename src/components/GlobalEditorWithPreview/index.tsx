@@ -40,6 +40,7 @@ export const GlobalEditorWithPreview: FunctionComponent<GlobalEditorWithPreviewP
   const onEditorChange = (value: string | undefined) => {
     throttledSetEditorContent(value ?? "");
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.editorWrapper}>

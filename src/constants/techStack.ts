@@ -1,6 +1,6 @@
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill, RiSvelteFill } from "react-icons/ri";
 
-export const TECH_STACK_LIST = [
+export const GLOBAL_TECH_STACK_LIST = [
   {
     icon: RiReactjsFill,
     name: "React",

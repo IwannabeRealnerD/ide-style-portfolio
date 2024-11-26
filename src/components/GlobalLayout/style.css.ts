@@ -11,7 +11,6 @@ export const wrapper = style({
   flexDirection: "column",
   height: "calc(100svh - 5rem)",
   margin: "2.5rem",
-  overflow: "hidden",
   ...globalResponsiveStyle({
     mobile: {
       margin: 0,
@@ -80,12 +79,14 @@ export const activeNavBar = style({
 
 export const contentWrapper = style({
   flexGrow: 1,
+  overflow: "auto",
 });
 
 export const footerWrapper = style({
   backgroundColor: GLOBAL_COLORS.DEEP_NAVY,
   borderTop: `1px solid ${GLOBAL_COLORS.LINE}`,
   display: "flex",
+  flexShrink: 0,
   height: "3.125rem",
   justifyContent: "space-between",
 });
