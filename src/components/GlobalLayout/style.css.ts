@@ -78,8 +78,10 @@ export const activeNavBar = style({
 });
 
 export const contentWrapper = style({
-  flexGrow: 1,
-  overflow: "auto",
+  // backgroundColor: "gray",
+  // flexGrow: 1,
+  // overflow: "auto",
+  height: "calc(100% - 6.125rem)",
 });
 
 export const footerWrapper = style({

@@ -5,11 +5,14 @@ import { GLOBAL_STYLE } from "@/constants/style";
 
 export const container = style({
   display: "flex",
+  height: "100%",
+  overflow: "hidden",
 });
 
 export const wrapper = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   flexShrink: 0,
+  overflow: "auto",
   width: GLOBAL_STYLE.SIDE_BAR_WIDTH,
 });
 
@@ -35,4 +38,8 @@ export const label = style({
   alignItems: "center",
   display: "flex",
   gap: ".5rem",
+});
+
+export const contentWrapper = style({
+  overflow: "auto",
 });

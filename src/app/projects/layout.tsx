@@ -73,7 +73,7 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
           </div>
         )}
       </div>
-      {props.children}
+      <div className={styles.contentWrapper}>{props.children}</div>
     </div>
   );
 };
