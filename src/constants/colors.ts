@@ -1,5 +1,6 @@
 export const GLOBAL_COLORS = {
   BLACK: "#000000",
+  DARK_BLUE: "#011221",
   DEEP_NAVY: "#011627",
   DIMMED_TURQUOISE: "#3C9D93",
   LAVENDER: "#4D5BCE",
@@ -7,6 +8,7 @@ export const GLOBAL_COLORS = {
   LINE: "#1E2D3D",
   ORANGE: "#FEA55F",
   PEACH: "#E99287",
+  PURPLE: "#5565E8",
   TURQUOISE: "#43D9AD",
   WHITE: "#FFFFFF",
 } as const;

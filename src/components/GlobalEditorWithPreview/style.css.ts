@@ -4,13 +4,14 @@ import { GLOBAL_COLORS } from "@/constants/colors";
 
 export const container = style({
   display: "flex",
+  height: "100%",
   width: "100%",
 });
 
 export const editorWrapper = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
-  height: "100%",
-  padding: "1rem 0",
+  height: "calc(100% - 2.5rem)",
+  paddingTop: "1rem",
   width: "50%",
 });
 
@@ -18,7 +19,8 @@ export const previewWrapper = style({
   backgroundColor: "#101010",
   color: GLOBAL_COLORS.WHITE,
   flexShrink: 0,
-  height: "100%",
+  height: "calc(100% - 2.5rem)",
+  overflow: "auto",
   padding: "1rem",
   width: "50%",
 });

@@ -1,4 +1,11 @@
+import { GLOBAL_TECH_STACK_LIST } from "@/constants/techStack";
 import { GLOBAL_INTERNAL_URL } from "@/constants/urls";
+
+const projectsSearchParams = new URLSearchParams();
+
+GLOBAL_TECH_STACK_LIST.forEach((techStack) => {
+  projectsSearchParams.append("techStack", techStack.name);
+});
 
 export const NAV_LINKS = [
   {
@@ -12,8 +19,8 @@ export const NAV_LINKS = [
     rootLink: GLOBAL_INTERNAL_URL.ABOUT.INDEX,
   },
   {
-    href: GLOBAL_INTERNAL_URL.PROJECTS.INDEX,
-    label: "project",
+    href: `${GLOBAL_INTERNAL_URL.PROJECTS.INDEX}?${projectsSearchParams.toString()}`,
+    label: "projects",
     rootLink: GLOBAL_INTERNAL_URL.PROJECTS.INDEX,
   },
 ];

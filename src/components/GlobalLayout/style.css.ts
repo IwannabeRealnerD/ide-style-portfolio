@@ -11,7 +11,6 @@ export const wrapper = style({
   flexDirection: "column",
   height: "calc(100svh - 5rem)",
   margin: "2.5rem",
-  overflow: "hidden",
   ...globalResponsiveStyle({
     mobile: {
       margin: 0,
@@ -33,7 +32,6 @@ export const headerWrapper = style({
 export const nameContainer = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   flexShrink: 0,
-  height: "100%",
   padding: "1.125rem 1.375rem",
   width: "15rem",
 });
@@ -79,13 +77,14 @@ export const activeNavBar = style({
 });
 
 export const contentWrapper = style({
-  flexGrow: 1,
+  height: "calc(100% - 6.125rem)",
 });
 
 export const footerWrapper = style({
   backgroundColor: GLOBAL_COLORS.DEEP_NAVY,
   borderTop: `1px solid ${GLOBAL_COLORS.LINE}`,
   display: "flex",
+  flexShrink: 0,
   height: "3.125rem",
   justifyContent: "space-between",
 });
@@ -94,7 +93,6 @@ export const footerTextWrapper = style({
   alignItems: "center",
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   display: "flex",
-  height: "100%",
   justifyContent: "center",
   width: "9.125rem",
 });
@@ -108,7 +106,6 @@ export const footerIconWrapper = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   color: GLOBAL_COLORS.LIGHT_GREY,
   display: "flex",
-  height: "100%",
   justifyContent: "center",
   width: "3.5rem",
 });
@@ -131,7 +128,6 @@ export const githubInfoContainer = style({
   color: GLOBAL_COLORS.LIGHT_GREY,
   display: "flex",
   gap: ".375rem",
-  height: "100%",
   justifyContent: "center",
   padding: "0 1.5rem",
 });

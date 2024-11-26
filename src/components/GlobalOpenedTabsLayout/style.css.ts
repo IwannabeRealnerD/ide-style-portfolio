@@ -21,6 +21,7 @@ export const verticalContainer = style({
 export const recentVisitTabWrapper = style({
   borderBottom: `1px solid ${GLOBAL_COLORS.LINE}`,
   display: "flex",
+  flexShrink: 0,
   height: "2.5rem",
 });
 
@@ -31,7 +32,6 @@ export const tabWrapper = style({
 export const tab = style({
   alignItems: "center",
   display: "flex",
-  height: "100%",
   padding: "0 .75rem 0 .875rem",
 });
 
@@ -47,7 +47,6 @@ export const closeButton = style({
   borderRight: `1px solid ${GLOBAL_COLORS.LINE}`,
   color: GLOBAL_COLORS.LIGHT_GREY,
   display: "flex",
-  height: "100%",
   padding: "0 .75rem",
   width: "100%",
 });
@@ -60,4 +59,5 @@ globalStyle(`${closeButton} > svg`, {
 export const pageContentWrapper = style({
   display: "flex",
   flex: 1,
+  height: "100%",
 });
