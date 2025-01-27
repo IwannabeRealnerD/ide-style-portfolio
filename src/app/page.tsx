@@ -6,7 +6,7 @@ import Image from "next/image";
 import BlueBlur from "@/app/IndexPage/BlueBlur.svg";
 import GreenBlur from "@/app/IndexPage/GreenBlur.svg";
 
-import { GamePart } from "./IndexPage/part/GamePart";
+import { SnakeGame } from "./IndexPage/part/GamePart";
 import * as styles from "./IndexPage/style.css";
 
 const Page: FunctionComponent = () => {
@@ -28,7 +28,7 @@ const Page: FunctionComponent = () => {
         </div>
       </div>
       <div className={styles.gameContainer}>
-        <GamePart />
+        <SnakeGame />
         <div className={styles.greenBlur}>
           <Image fill alt="" src={GreenBlur} />
         </div>
