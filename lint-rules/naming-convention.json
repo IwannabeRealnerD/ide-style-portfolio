@@ -61,6 +61,7 @@
       }
     },
     {
+      "excludedFiles": ["src/components/**/internal/**/*.tsx"],
       "files": "src/components/**/*.tsx",
       "plugins": ["@typescript-eslint"],
       "rules": {
