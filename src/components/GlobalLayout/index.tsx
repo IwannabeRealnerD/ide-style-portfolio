@@ -8,7 +8,6 @@ import clsx from "clsx";
 import { RiGithubFill, RiTwitterFill } from "react-icons/ri";
 
 import { NAV_LINKS } from "./constant";
-import * as styles from "./style.css";
 
 interface GlobalLayoutProps {
   children: ReactNode;
@@ -25,54 +24,54 @@ export const GlobalLayout: FunctionComponent<GlobalLayoutProps> = (props) => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.headerWrapper}>
-        <div className={styles.nameContainer}>
-          <p>iwannaberealnerd</p>
+    <div className="bg-deep-navy border border-line rounded-lg flex flex-col m-10 ">
+      <div className="flex items-center border-b border-line text-base h-12 justify-start">
+        <div className="border-r-1 border-line shrink-0 h-full flex items-center justify-start pl-5.5 w-60">
+          <p className="text-base text-light-grey">iwannaberealnerd</p>
         </div>
-        <nav className={styles.navContainer}>
+        <nav className="flex h-full">
           {NAV_LINKS.map((link) => {
             return (
-              <div key={link.href} className={styles.navLinkWrapper}>
+              <div key={link.href} className="border-r border-line">
                 <Link
                   className={clsx(
-                    styles.navLink,
-                    isActiveNavLink(link) ? styles.activeNavLink : styles.inActiveNavLink
+                    "items-center flex font-normal text-base h-full justify-center px-4 relative w-full",
+                    isActiveNavLink(link) ? "text-white" : "text-grey"
                   )}
                   href={link.href}
                 >
                   {link.label}
-                  {isActiveNavLink(link) && <div className={styles.activeNavBar} />}
+                  {isActiveNavLink(link) && <div className="bg-orange bottom-0 h-1 left-0 absolute w-full" />}
                 </Link>
               </div>
             );
           })}
         </nav>
       </div>
-      <div className={styles.contentWrapper}>{props.children}</div>
-      <div className={styles.footerWrapper}>
-        <div className={styles.leftContainer}>
-          <div className={styles.footerTextWrapper}>
-            <p>find me in:</p>
+      <div>{props.children}</div>
+      <div className="bg-deep-navy border-t border-line flex h-12.5 justify-between">
+        <div className="flex">
+          <div className="border-r border-line flex items-center justify-center w-36.5">
+            <p className="text-grey text-base font-normal">find me in:</p>
           </div>
           <a
-            className={styles.footerIconWrapper}
+            className="items-center border-r border-line flex justify-center w-14"
             href="https://x.com/WannabeRealnerD"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <RiTwitterFill />
+            <RiTwitterFill className="size-4.5 text-grey" />
           </a>
         </div>
-        <div className={styles.rightContainer}>
+        <div className="border-l border-line flex">
           <a
-            className={styles.githubInfoContainer}
+            className="items-center border-r border-line flex justify-center px-6 gap-1.5 text-grey"
             href="https://github.com/IwannabeRealnerD"
             rel="noopener noreferrer"
             target="_blank"
           >
             <p>@IwannabeRealnerD</p>
-            <RiGithubFill />
+            <RiGithubFill className="size-4.5" />
           </a>
         </div>
       </div>
