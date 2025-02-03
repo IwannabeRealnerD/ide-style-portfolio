@@ -58,13 +58,11 @@ export const SnakeGame = () => {
           y: head.y + direction.y,
         };
 
-        // Check wall collision
         if (newHead.x < 0 || newHead.x >= GRID_SIZE || newHead.y < 0 || newHead.y >= GRID_SIZE) {
           setIsGameOver(true);
           return currentSnake;
         }
 
-        // Check collision with self
         if (currentSnake.some((segment) => segment.x === newHead.x && segment.y === newHead.y)) {
           setIsGameOver(true);
           return currentSnake;
@@ -72,7 +70,6 @@ export const SnakeGame = () => {
 
         const newSnake = [newHead, ...currentSnake];
 
-        // Check if food is eaten
         if (newHead.x === food.x && newHead.y === food.y) {
           setFood(generateFood());
           setScore((s) => s + 1);
@@ -98,54 +95,42 @@ export const SnakeGame = () => {
   };
 
   return (
-    <div style={{ alignItems: "center", display: "flex", flexDirection: "column", gap: "16px", padding: "16px" }}>
-      <div style={{ fontSize: "20px", fontWeight: "bold" }}>Score: {score}</div>
+    <div>
+      <div>Score: {score}</div>
       <div
+        className="bg-[#ffffff] border-2 border-gray-300 relative"
         style={{
-          backgroundColor: "#f3f4f6",
-          border: "2px solid #d1d5db",
           height: GRID_SIZE * CELL_SIZE,
-          position: "relative",
           width: GRID_SIZE * CELL_SIZE,
         }}
       >
         {snake.map((segment) => (
           <div
             key={`${segment.x}-${segment.y}`}
+            className="bg-[green] absolute"
             style={{
-              backgroundColor: "#22c55e",
               height: CELL_SIZE - 2,
               left: segment.x * CELL_SIZE,
-              position: "absolute",
               top: segment.y * CELL_SIZE,
               width: CELL_SIZE - 2,
             }}
           />
         ))}
         <div
+          className="bg-[red] absolute"
           style={{
-            backgroundColor: "#ef4444",
             height: CELL_SIZE - 2,
             left: food.x * CELL_SIZE,
-            position: "absolute",
             top: food.y * CELL_SIZE,
             width: CELL_SIZE - 2,
           }}
         />
       </div>
       {isGameOver && (
-        <div style={{ textAlign: "center" }}>
-          <div style={{ color: "#ef4444", fontSize: "20px", fontWeight: "bold", marginBottom: "8px" }}>Game Over!</div>
+        <div className="text-center">
+          <div className="text-red-500 text-xl font-bold mb-2">Game Over!</div>
           <button
-            style={{
-              backgroundColor: "#3b82f6",
-              border: "none",
-              borderRadius: "4px",
-              color: "#ffffff",
-              cursor: "pointer",
-              padding: "8px 16px",
-              transition: "background-color 0.2s",
-            }}
+            className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer transition-colors hover:bg-blue-600"
             type="button"
             onClick={resetGame}
           >
