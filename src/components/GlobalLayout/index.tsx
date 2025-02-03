@@ -11,7 +11,7 @@ interface GlobalLayoutProps {
 
 export const GlobalLayout: FunctionComponent<GlobalLayoutProps> = (props) => {
   return (
-    <div className="bg-deep-navy border border-line rounded-lg flex flex-col m-10 ">
+    <div className="bg-deep-navy border-line m-10 flex flex-col rounded-lg border">
       <NavBar />
       <div>{props.children}</div>
       <Footer />

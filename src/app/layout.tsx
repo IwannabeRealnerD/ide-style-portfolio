@@ -28,7 +28,7 @@ const RootLayout = ({
       <head>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       </head>
-      <body className={clsx(firaCode.className, "bg-[#010C15] min-w-[360px]")}>
+      <body className={clsx(firaCode.className, "min-w-[360px] bg-[#010C15]")}>
         <GlobalLayout>{children}</GlobalLayout>
       </body>
     </html>
