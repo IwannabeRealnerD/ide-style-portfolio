@@ -1,9 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import clsx from "clsx";
 
-import { NAV_LINKS } from "./constant";
+import { NAV_LINKS } from "../constant";
 
 export const NavBar = () => {
   const pathname = usePathname();
@@ -14,23 +16,23 @@ export const NavBar = () => {
     return pathname.includes(link.rootLink);
   };
   return (
-    <div className="flex items-center border-b border-line text-base h-12 justify-start">
-      <div className="border-r-1 border-line shrink-0 h-full flex items-center justify-start pl-5.5 w-60">
-        <p className="text-base text-light-grey">iwannaberealnerd</p>
+    <div className="border-line flex h-12 items-center justify-start border-b text-base">
+      <div className="border-line flex h-full w-60 shrink-0 items-center justify-start border-r-1 pl-5.5">
+        <p className="text-light-grey text-base">iwannaberealnerd</p>
       </div>
       <nav className="flex h-full">
         {NAV_LINKS.map((link) => {
           return (
-            <div key={link.href} className="border-r border-line">
+            <div key={link.href} className="border-line border-r">
               <Link
                 className={clsx(
-                  "items-center flex font-normal text-base h-full justify-center px-4 relative w-full",
+                  "relative flex h-full w-full items-center justify-center px-4 text-base font-normal",
                   isActiveNavLink(link) ? "text-white" : "text-grey"
                 )}
                 href={link.href}
               >
                 {link.label}
-                {isActiveNavLink(link) && <div className="bg-orange bottom-0 h-1 left-0 absolute w-full" />}
+                {isActiveNavLink(link) && <div className="bg-orange absolute bottom-0 left-0 h-1 w-full" />}
               </Link>
             </div>
           );

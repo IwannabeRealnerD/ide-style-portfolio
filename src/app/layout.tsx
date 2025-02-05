@@ -4,7 +4,8 @@ import { Fira_Code } from "next/font/google";
 
 import clsx from "clsx";
 
-import { GlobalLayout } from "@/components/GlobalLayout";
+import { Footer } from "./layout/components/Footer";
+import { NavBar } from "./layout/components/NavBar";
 
 import "./globals.css";
 
@@ -29,7 +30,11 @@ const RootLayout = ({
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       </head>
       <body className={clsx(firaCode.className, "min-w-[360px] bg-[#010C15]")}>
-        <GlobalLayout>{children}</GlobalLayout>
+        <div className="bg-deep-navy border-line m-10 flex flex-col rounded-lg border">
+          <NavBar />
+          <div>{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
