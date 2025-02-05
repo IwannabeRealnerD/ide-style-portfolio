@@ -2,7 +2,7 @@
 
 import { FunctionComponent } from "react";
 
-import { EditorWithPreview } from "@/app/about/components/EditorWithPreview";
+import { EditorWithPreview } from "../../components/EditorWithPreview";
 
 import AboutMarkdown from "./bio.md";
 
