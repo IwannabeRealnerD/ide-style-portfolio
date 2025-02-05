@@ -3,8 +3,7 @@
 import { FunctionComponent, ReactNode, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { GlobalOpenedTabsLayout } from "@/components/GlobalOpenedTabsLayout";
-
+import { OpenedTabsBar } from "./layout/components/OpenedTabsBar";
 import { PERSONAL_INFO_MENU, PROFESSIONAL_INFO_MENU } from "./layout/constant";
 import { ContactPart } from "./layout/part/ContactPart";
 import { DirectoryPart } from "./layout/part/DirectoryPart";
@@ -40,7 +39,7 @@ const AboutLayout: FunctionComponent<AboutLayoutProps> = (props) => {
   }
 
   return (
-    <GlobalOpenedTabsLayout pageContent={props.children}>
+    <OpenedTabsBar pageContent={props.children}>
       <DirectoryPart
         directoryName="professional-info"
         isOpened={openedMenu.professionalInfo ?? false}
@@ -64,7 +63,7 @@ const AboutLayout: FunctionComponent<AboutLayoutProps> = (props) => {
         }
       />
       <ContactPart />
-    </GlobalOpenedTabsLayout>
+    </OpenedTabsBar>
   );
 };
 

@@ -13,11 +13,11 @@ import * as styles from "./style.css";
 
 type EditorRefType = editor.IStandaloneCodeEditor;
 
-interface GlobalEditorWithPreviewProps {
+interface EditorWithPreviewProps {
   initialContent: string;
 }
 
-export const GlobalEditorWithPreview: FunctionComponent<GlobalEditorWithPreviewProps> = (props) => {
+export const EditorWithPreview: FunctionComponent<EditorWithPreviewProps> = (props) => {
   const [editorContent, setEditorContent] = useState<string | null>(null);
   const editorRef = useRef<EditorRefType | null>(null);
 

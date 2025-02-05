@@ -2,12 +2,12 @@
 
 import { FunctionComponent } from "react";
 
-import { GlobalEditorWithPreview } from "@/components/GlobalEditorWithPreview";
+import { EditorWithPreview } from "../../components/EditorWithPreview";
 
 import AboutMarkdown from "./education.md";
 
 const AboutPersonalInfoEducationPage: FunctionComponent = () => {
-  return <GlobalEditorWithPreview initialContent={AboutMarkdown} />;
+  return <EditorWithPreview initialContent={AboutMarkdown} />;
 };
 
 export default AboutPersonalInfoEducationPage;

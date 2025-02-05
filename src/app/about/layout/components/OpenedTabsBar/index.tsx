@@ -13,12 +13,12 @@ import { globalGetLocalStorage, globalSetLocalStorage, globalRemoveLocalStorage 
 
 import * as styles from "./style.css";
 
-interface GlobalOpenedTabsLayoutProps {
+interface OpenedTabsBarProps {
   children: ReactNode;
   pageContent: ReactNode;
 }
 
-export const GlobalOpenedTabsLayout: FunctionComponent<GlobalOpenedTabsLayoutProps> = (props) => {
+export const OpenedTabsBar: FunctionComponent<OpenedTabsBarProps> = (props) => {
   const [recentTabs, setRecentTabs] = useState<(keyof typeof GLOBAL_RECENT_TABS)[] | null>([]);
 
   const router = useRouter();

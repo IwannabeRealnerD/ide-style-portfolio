@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { RiFile2Fill, RiFolder3Fill, RiFolderOpenFill } from "react-icons/ri";
 import { VscChevronDown, VscChevronRight } from "react-icons/vsc";
 
-import { MenuLink } from "../../component/MenuLink";
+import { MenuLink } from "../../components/MenuLink";
 
 import * as styles from "./style.css";
 
