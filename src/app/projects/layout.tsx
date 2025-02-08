@@ -9,8 +9,6 @@ import { GlobalCheckBox } from "@/components/GlobalCheckBox";
 import { GLOBAL_TECH_STACK_LIST } from "@/constants/techStack";
 import { useGlobalRouterPush } from "@/hooks/useRouterPush";
 
-import * as styles from "./layout.css";
-
 interface ProjectsLayoutProps {
   children: ReactNode;
 }
@@ -24,17 +22,21 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
 
   const currentSelectedTechStacks = searchParams.getAll("techStack") || [];
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <button className={styles.button} type="button" onClick={() => setIsSelectBoxOpened((prev) => !prev)}>
+    <div className="flex h-full overflow-hidden">
+      <div className="border-line w-60 shrink-0 overflow-auto border-r">
+        <button
+          className="border-line text-light-grey flex w-full content-start gap-2 border-b pt-2.5 pr-5.5 pb-2.5"
+          type="button"
+          onClick={() => setIsSelectBoxOpened((prev) => !prev)}
+        >
           {isSelectBoxOpened ? <VscChevronRight /> : <VscChevronDown />} tech stack
         </button>
         {isSelectBoxOpened && (
-          <div className={styles.checkboxContainer}>
+          <div className="flex flex-col gap-4.5 px-4.5 py-5.5">
             <GlobalCheckBox
               isChecked={currentSelectedTechStacks.length === 4}
               label={
-                <div className={styles.label}>
+                <div className="flex items-center gap-2">
                   <VscListFlat />
                   All
                 </div>
@@ -61,7 +63,7 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
                   key={techStack.name}
                   isChecked={isChecked}
                   label={
-                    <div className={styles.label}>
+                    <div className="flex items-center gap-2">
                       <techStack.icon />
                       {techStack.name}
                     </div>
@@ -73,7 +75,7 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
           </div>
         )}
       </div>
-      <div className={styles.contentWrapper}>{props.children}</div>
+      <div className="overflow-auto">{props.children}</div>
     </div>
   );
 };
