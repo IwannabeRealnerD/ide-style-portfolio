@@ -16,7 +16,7 @@ export const NavBar = () => {
     return pathname.includes(link.rootLink);
   };
   return (
-    <div className="border-line flex h-12 items-center justify-start border-b text-base">
+    <div className="border-line flex h-12 shrink-0 items-center justify-start border-b text-base">
       <div className="border-line flex h-full w-60 shrink-0 items-center justify-start border-r-1 pl-5.5">
         <p className="text-light-grey text-base">iwannaberealnerd</p>
       </div>

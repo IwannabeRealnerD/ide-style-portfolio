@@ -40,8 +40,8 @@ export const EditorWithPreview: FunctionComponent<EditorWithPreviewProps> = (pro
   };
 
   return (
-    <div className="flex h-full w-full">
-      <div className="border-line h-full w-1/2 border-r pt-4">
+    <div className="flex h-full w-full overflow-hidden">
+      <div className="border-line w-1/2 border-r pt-4">
         <Editor
           defaultValue={props.initialContent}
           height="100%"
@@ -62,7 +62,7 @@ export const EditorWithPreview: FunctionComponent<EditorWithPreviewProps> = (pro
           onMount={handleEditorDidMount}
         />
       </div>
-      <div className="markdown">
+      <div className="markdown w-1/2 overflow-scroll">
         <ReactMarkdown>{editorContent}</ReactMarkdown>
       </div>
     </div>

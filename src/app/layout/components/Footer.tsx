@@ -2,7 +2,7 @@ import { RiTwitterFill, RiGithubFill } from "react-icons/ri";
 
 export const Footer = () => {
   return (
-    <div className="bg-deep-navy border-line flex h-12.5 justify-between border-t">
+    <div className="bg-deep-navy border-line flex h-12.5 shrink-0 justify-between border-t">
       <div className="flex">
         <div className="border-line flex w-36.5 items-center justify-center border-r">
           <p className="text-grey text-base font-normal">find me in:</p>

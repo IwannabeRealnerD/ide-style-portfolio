@@ -88,7 +88,7 @@ export const OpenedTabsBar: FunctionComponent<OpenedTabsBarProps> = (props) => {
             );
           })}
         </div>
-        <div className="flex h-full">{props.pageContent}</div>
+        {props.pageContent}
       </div>
     </div>
   );
