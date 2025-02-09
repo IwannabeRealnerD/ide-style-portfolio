@@ -25,15 +25,16 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
     <div className="flex h-full overflow-hidden">
       <div className="border-line w-60 shrink-0 overflow-auto border-r">
         <button
-          className="border-line text-light-grey flex w-full content-start gap-2 border-b pt-2.5 pr-5.5 pb-2.5"
+          className="border-line text-light-grey flex w-full content-center items-center gap-2 border-b px-4.5 py-2 hover:cursor-pointer hover:text-white/70"
           type="button"
           onClick={() => setIsSelectBoxOpened((prev) => !prev)}
         >
           {isSelectBoxOpened ? <VscChevronRight /> : <VscChevronDown />} tech stack
         </button>
         {isSelectBoxOpened && (
-          <div className="flex flex-col gap-4.5 px-4.5 py-5.5">
+          <div className="flex flex-col py-1.5">
             <GlobalCheckBox
+              className="py-2 pl-8"
               isChecked={currentSelectedTechStacks.length === 4}
               label={
                 <div className="flex items-center gap-2">
@@ -61,6 +62,7 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
               return (
                 <GlobalCheckBox
                   key={techStack.name}
+                  className="py-2 pl-8"
                   isChecked={isChecked}
                   label={
                     <div className="flex items-center gap-2">

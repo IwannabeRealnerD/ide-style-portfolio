@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 
 import clsx from "clsx";
 
+import { GLOBAL_INTERNAL_URL } from "@/constants/urls";
+
 import { NAV_LINKS } from "../constant";
 
 export const NavBar = () => {
@@ -17,8 +19,13 @@ export const NavBar = () => {
   };
   return (
     <div className="border-line flex h-12 shrink-0 items-center justify-start border-b text-base">
-      <div className="border-line flex h-full w-60 shrink-0 items-center justify-start border-r-1 pl-5.5">
-        <p className="text-light-grey text-base">iwannaberealnerd</p>
+      <div className="border-line flex h-full w-60 shrink-0 items-center justify-start border-r-1">
+        <Link
+          className="text-light-grey flex h-full w-full items-center pl-3.5 text-base"
+          href={GLOBAL_INTERNAL_URL.INDEX}
+        >
+          iwannaberealnerd
+        </Link>
       </div>
       <nav className="flex h-full">
         {NAV_LINKS.map((link) => {

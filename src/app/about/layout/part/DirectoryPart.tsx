@@ -1,3 +1,5 @@
+"use client";
+
 import { FunctionComponent } from "react";
 import { usePathname } from "next/navigation";
 
@@ -20,7 +22,7 @@ export const DirectoryPart: FunctionComponent<DirectoryPartProps> = (props) => {
   return (
     <>
       <button
-        className="flex w-full content-start items-center gap-2 pb-4.5 pl-3.5"
+        className="flex w-full cursor-pointer content-start items-center gap-2 p-2"
         type="button"
         onClick={props.onClick}
       >

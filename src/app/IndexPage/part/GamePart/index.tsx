@@ -98,7 +98,7 @@ export const SnakeGame = () => {
     <div>
       <div>Score: {score}</div>
       <div
-        className="bg-[#ffffff] border-2 border-gray-300 relative"
+        className="relative border-2 border-gray-300 bg-[#ffffff]"
         style={{
           height: GRID_SIZE * CELL_SIZE,
           width: GRID_SIZE * CELL_SIZE,
@@ -107,7 +107,7 @@ export const SnakeGame = () => {
         {snake.map((segment) => (
           <div
             key={`${segment.x}-${segment.y}`}
-            className="bg-[green] absolute"
+            className="absolute bg-[green]"
             style={{
               height: CELL_SIZE - 2,
               left: segment.x * CELL_SIZE,
@@ -117,7 +117,7 @@ export const SnakeGame = () => {
           />
         ))}
         <div
-          className="bg-[red] absolute"
+          className="absolute bg-[red]"
           style={{
             height: CELL_SIZE - 2,
             left: food.x * CELL_SIZE,
@@ -128,9 +128,9 @@ export const SnakeGame = () => {
       </div>
       {isGameOver && (
         <div className="text-center">
-          <div className="text-red-500 text-xl font-bold mb-2">Game Over!</div>
+          <div className="mb-2 text-xl font-bold text-red-500">Game Over!</div>
           <button
-            className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer transition-colors hover:bg-blue-600"
+            className="cursor-pointer rounded bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
             type="button"
             onClick={resetGame}
           >

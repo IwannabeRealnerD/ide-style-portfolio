@@ -78,7 +78,7 @@ export const OpenedTabsBar: FunctionComponent<OpenedTabsBarProps> = (props) => {
                   {GLOBAL_RECENT_TABS[tab].title}
                 </Link>
                 <button
-                  className="border-line text-grey flex items-center border-r px-3"
+                  className="border-line text-grey flex cursor-pointer items-center border-r px-3 hover:text-white/80"
                   type="button"
                   onClick={() => onCloseTab(tab)}
                 >
