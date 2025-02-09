@@ -40,7 +40,7 @@ export const DirectoryPart: FunctionComponent<DirectoryPartProps> = (props) => {
         <p className={clsx("text-base", isDirectoryActive ? "text-white" : "text-grey")}>{props.directoryName}</p>
       </button>
       {props.isOpened && (
-        <>
+        <div className="">
           {props.menus.links.map((menu) => {
             const isMenuActive = pathname.includes(menu.href);
             return (
@@ -53,7 +53,7 @@ export const DirectoryPart: FunctionComponent<DirectoryPartProps> = (props) => {
               />
             );
           })}
-        </>
+        </div>
       )}
     </>
   );
