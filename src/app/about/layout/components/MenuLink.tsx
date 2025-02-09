@@ -5,8 +5,6 @@ import Link from "next/link";
 
 import { clsx } from "clsx";
 
-import * as styles from "./style.css";
-
 interface MenuLinkProps {
   title: string;
   link: string;
@@ -16,11 +14,9 @@ interface MenuLinkProps {
 
 export const MenuLink = (props: MenuLinkProps) => {
   return (
-    <Link className={styles.container} href={props.link}>
+    <Link className="flex items-center gap-2 pb-4 pl-12.5" href={props.link}>
       {props.icon}
-      <p className={clsx(styles.linkText, props.isActive ? styles.activeLinkText : styles.inActiveLinkText)}>
-        {props.title}
-      </p>
+      <p className={clsx("size-4", props.isActive ? "text-white" : "text-grey")}>{props.title}</p>
     </Link>
   );
 };

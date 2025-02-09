@@ -1,4 +1,7 @@
 {
+  "files.associations": {
+      "app.css": "tailwindcss",
+    },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnSave": true

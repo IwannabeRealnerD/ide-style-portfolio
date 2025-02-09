@@ -9,8 +9,6 @@ import ReactMarkdown from "react-markdown";
 import { GLOBAL_COLORS } from "@/constants/colors";
 import { useGlobalDebounce } from "@/hooks/useDebounce";
 
-import * as styles from "./style.css";
-
 type EditorRefType = editor.IStandaloneCodeEditor;
 
 interface EditorWithPreviewProps {
@@ -42,8 +40,8 @@ export const EditorWithPreview: FunctionComponent<EditorWithPreviewProps> = (pro
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.editorWrapper}>
+    <div className="flex h-full w-full">
+      <div className="border-line h-full w-1/2 border-r pt-4">
         <Editor
           defaultValue={props.initialContent}
           height="100%"
@@ -64,7 +62,7 @@ export const EditorWithPreview: FunctionComponent<EditorWithPreviewProps> = (pro
           onMount={handleEditorDidMount}
         />
       </div>
-      <div className={styles.previewWrapper}>
+      <div className="markdown">
         <ReactMarkdown>{editorContent}</ReactMarkdown>
       </div>
     </div>

@@ -5,9 +5,7 @@ import clsx from "clsx";
 import { RiFile2Fill, RiFolder3Fill, RiFolderOpenFill } from "react-icons/ri";
 import { VscChevronDown, VscChevronRight } from "react-icons/vsc";
 
-import { MenuLink } from "../../components/MenuLink";
-
-import * as styles from "./style.css";
+import { MenuLink } from "../components/MenuLink";
 
 interface DirectoryPartProps {
   isOpened: boolean;
@@ -21,26 +19,23 @@ export const DirectoryPart: FunctionComponent<DirectoryPartProps> = (props) => {
   const isDirectoryActive = pathname.includes(props.directoryName);
   return (
     <>
-      <button className={styles.buttonWrapper} type="button" onClick={props.onClick}>
+      <button
+        className="flex w-full content-start items-center gap-2 pb-4.5 pl-3.5"
+        type="button"
+        onClick={props.onClick}
+      >
         {props.isOpened ? (
           <>
-            <VscChevronDown className={styles.chevronIcon} />
-            <RiFolderOpenFill className={styles.folderIcon} />
+            <VscChevronDown className="text-grey size-4 shrink-0" />
+            <RiFolderOpenFill className="text-turquoise size-4 shrink-0" />
           </>
         ) : (
           <>
-            <VscChevronRight className={styles.chevronIcon} />
-            <RiFolder3Fill className={styles.folderIcon} />
+            <VscChevronRight className="text-grey size-4 shrink-0" />
+            <RiFolder3Fill className="text-turquoise size-4 shrink-0" />
           </>
         )}
-        <p
-          className={clsx(
-            styles.directoryName,
-            isDirectoryActive ? styles.activeDirectoryName : styles.inActiveDirectoryName
-          )}
-        >
-          {props.directoryName}
-        </p>
+        <p className={clsx("text-base", isDirectoryActive ? "text-white" : "text-grey")}>{props.directoryName}</p>
       </button>
       {props.isOpened && (
         <>

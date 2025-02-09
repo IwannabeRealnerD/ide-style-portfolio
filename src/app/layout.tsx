@@ -7,7 +7,7 @@ import clsx from "clsx";
 import { Footer } from "./layout/components/Footer";
 import { NavBar } from "./layout/components/NavBar";
 
-import "./globals.css";
+import "./app.css";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
