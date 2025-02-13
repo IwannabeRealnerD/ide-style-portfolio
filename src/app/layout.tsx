@@ -4,9 +4,10 @@ import { Fira_Code } from "next/font/google";
 
 import clsx from "clsx";
 
-import { GlobalLayout } from "@/components/GlobalLayout";
+import { Footer } from "./layout/components/Footer";
+import { NavBar } from "./layout/components/NavBar";
 
-import "./globals.css";
+import "./app.css";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -29,7 +30,13 @@ const RootLayout = ({
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       </head>
       <body className={clsx(firaCode.className, "min-w-[360px] bg-[#010C15]")}>
-        <GlobalLayout>{children}</GlobalLayout>
+        <div className="flex h-svh flex-col p-10">
+          <div className="bg-deep-navy border-line flex h-full flex-col overflow-hidden rounded-lg border">
+            <NavBar />
+            <main className="grow overflow-hidden">{children}</main>
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );

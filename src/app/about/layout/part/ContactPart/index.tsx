@@ -1,18 +1,14 @@
-import { RiMailFill, RiPhoneFill } from "react-icons/ri";
-
-import * as styles from "./style.css";
+import { CONTACT_INFO } from "./constant";
 
 export const ContactPart = () => {
   return (
-    <div className={styles.container}>
-      <a className={styles.contactLink} href="mailto:iwannaberealnerd@gmail.com">
-        <RiMailFill />
-        <p>iwannaberealnerd@gmail.com</p>
-      </a>
-      <a className={styles.contactLink} href="tel:+821051200592">
-        <RiPhoneFill />
-        <p>+82 10 5120 0592</p>
-      </a>
+    <div className="flex flex-col gap-2.5 px-4.5 py-3.5">
+      {CONTACT_INFO.map((contact) => (
+        <a key={contact.label} className="text-grey flex items-center gap-2 text-sm" href={contact.link}>
+          <contact.icon className="size-4.75 shrink-0" />
+          <p className="text-xs">{contact.label}</p>
+        </a>
+      ))}
     </div>
   );
 };

@@ -1,11 +1,10 @@
 "use client";
 
-import { ProjectCard } from "./component/ProjectCard";
-import * as styles from "./page.css";
+import { ProjectCard } from "./components/ProjectCard";
 
 const ProjectsPage = () => {
   return (
-    <div className={styles.container}>
+    <div className="flex flex-wrap content-start gap-10 p-10">
       <ProjectCard />
       <ProjectCard />
       <ProjectCard />

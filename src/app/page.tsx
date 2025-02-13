@@ -10,7 +10,7 @@ import { SnakeGame } from "./IndexPage/part/GamePart";
 
 const Page: FunctionComponent = () => {
   return (
-    <div className="relative mb-45 flex justify-center gap-30 px-40">
+    <div className="relative mb-45 flex h-full justify-center gap-30 overflow-scroll px-40">
       <div className="md:mt-65 md:mb-20">
         <div>
           <p className="text-light-grey text-lg font-normal">Hi all. I am</p>
