@@ -64,21 +64,21 @@ export const OpenedTabsBar: FunctionComponent<OpenedTabsBarProps> = (props) => {
 
   return (
     <div className="flex h-full">
-      <div className="border-line w-60 shrink-0 border-r pt-4.5">{props.children}</div>
+      <div className="w-60 shrink-0 border-r border-slate-700 pt-4.5">{props.children}</div>
       <div className="flex w-full flex-col">
-        <div className="border-line flex h-10 shrink-0 border-b">
+        <div className="flex h-10 shrink-0 border-b border-slate-700">
           {recentTabs?.map((tab) => {
             const isCurrentTab = pathname === GLOBAL_RECENT_TABS[tab].href;
             return (
               <div key={tab} className="flex">
                 <Link
-                  className={clsx("flex items-center pr-3 pl-3.5", isCurrentTab ? "text-white" : "text-grey")}
+                  className={clsx("flex items-center pr-3 pl-3.5", isCurrentTab ? "text-gray-50" : "text-slate-500")}
                   href={GLOBAL_RECENT_TABS[tab].href}
                 >
                   {GLOBAL_RECENT_TABS[tab].title}
                 </Link>
                 <button
-                  className="border-line text-grey flex cursor-pointer items-center border-r px-3 hover:text-white/80"
+                  className="flex cursor-pointer items-center border-r border-slate-700 px-3 text-slate-500 hover:text-slate-600"
                   type="button"
                   onClick={() => onCloseTab(tab)}
                 >

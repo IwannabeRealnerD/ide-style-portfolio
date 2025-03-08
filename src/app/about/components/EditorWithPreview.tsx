@@ -41,7 +41,7 @@ export const EditorWithPreview: FunctionComponent<EditorWithPreviewProps> = (pro
 
   return (
     <div className="flex h-full w-full overflow-hidden">
-      <div className="border-line w-1/2 border-r pt-4">
+      <div className="w-1/2 border-r border-slate-700 pt-4">
         <Editor
           defaultValue={props.initialContent}
           height="100%"
