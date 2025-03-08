@@ -28,16 +28,18 @@ export const DirectoryPart: FunctionComponent<DirectoryPartProps> = (props) => {
       >
         {props.isOpened ? (
           <>
-            <VscChevronDown className="text-grey size-4 shrink-0" />
-            <RiFolderOpenFill className="text-turquoise size-4 shrink-0" />
+            <VscChevronDown className="size-4 shrink-0 text-slate-500" />
+            <RiFolderOpenFill className="size-4 shrink-0 text-teal-400" />
           </>
         ) : (
           <>
-            <VscChevronRight className="text-grey size-4 shrink-0" />
-            <RiFolder3Fill className="text-turquoise size-4 shrink-0" />
+            <VscChevronRight className="size-4 shrink-0 text-slate-500" />
+            <RiFolder3Fill className="size-4 shrink-0 text-teal-400" />
           </>
         )}
-        <p className={clsx("text-base", isDirectoryActive ? "text-white" : "text-grey")}>{props.directoryName}</p>
+        <p className={clsx("text-base", isDirectoryActive ? "text-gray-50" : "text-slate-500")}>
+          {props.directoryName}
+        </p>
       </button>
       {props.isOpened && (
         <div className="">

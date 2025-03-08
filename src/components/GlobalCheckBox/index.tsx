@@ -22,13 +22,13 @@ export const GlobalCheckBox: FunctionComponent<GlobalCheckBoxProps> = (props) =>
         onChange={() => props.onChange()}
       />
       <div
-        className={clsx("border-grey relative h-4.5 w-4.5 cursor-pointer rounded-xs border", {
+        className={clsx("relative h-4.5 w-4.5 cursor-pointer rounded-xs border border-slate-500", {
           "after:border-r-0.25 after:border-b-0.25 after:absolute after:top-0.75 after:left-1.5 after:h-2.25 after:w-1 after:rotate-45 after:border after:border-t-0 after:border-l-0 after:border-white after:content-['']":
             props.isChecked,
-          "bg-grey": props.isChecked,
+          "bg-slate-500": props.isChecked,
         })}
       />
-      <span className="text-grey text-base font-normal group-hover:text-white/70! peer-checked:text-white">
+      <span className="text-base font-normal text-slate-400 group-hover:text-slate-600! peer-checked:text-white">
         {props.label}
       </span>
     </label>

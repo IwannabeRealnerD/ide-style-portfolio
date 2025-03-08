@@ -29,9 +29,9 @@ const RootLayout = ({
       <head>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       </head>
-      <body className={clsx(firaCode.className, "min-w-[360px] bg-[#010C15]")}>
+      <body className={clsx(firaCode.className, "min-w-[360px] bg-slate-950")}>
         <div className="flex h-svh flex-col p-10">
-          <div className="bg-deep-navy border-line flex h-full flex-col overflow-hidden rounded-lg border">
+          <div className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-700 bg-slate-900">
             <NavBar />
             <main className="grow overflow-hidden">{children}</main>
             <Footer />

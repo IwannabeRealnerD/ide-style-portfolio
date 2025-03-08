@@ -23,9 +23,9 @@ const ProjectsLayout = (props: ProjectsLayoutProps) => {
   const currentSelectedTechStacks = searchParams.getAll("techStack") || [];
   return (
     <div className="flex h-full overflow-hidden">
-      <div className="border-line w-60 shrink-0 overflow-auto border-r">
+      <div className="w-60 shrink-0 overflow-auto border-r border-slate-700">
         <button
-          className="border-line text-light-grey flex w-full content-center items-center gap-2 border-b px-4.5 py-2 hover:cursor-pointer hover:text-white/70"
+          className="flex w-full content-center items-center gap-2 border-b border-slate-700 px-4.5 py-2 text-slate-400 hover:cursor-pointer hover:text-slate-600"
           type="button"
           onClick={() => setIsSelectBoxOpened((prev) => !prev)}
         >
