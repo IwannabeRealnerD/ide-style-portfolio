@@ -4,11 +4,11 @@ import { ReactNode, FunctionComponent, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-import clsx from "clsx";
 import { RiCloseFill } from "react-icons/ri";
 
 import { GLOBAL_RECENT_TABS } from "@/constants/recentTabs";
 import { GLOBAL_INTERNAL_URL } from "@/constants/urls";
+import { globalCn } from "@/utils/cn";
 import { globalGetLocalStorage, globalSetLocalStorage, globalRemoveLocalStorage } from "@/utils/globalLocalStorage";
 
 interface OpenedTabsBarProps {
@@ -72,7 +72,10 @@ export const OpenedTabsBar: FunctionComponent<OpenedTabsBarProps> = (props) => {
             return (
               <div key={tab} className="flex">
                 <Link
-                  className={clsx("flex items-center pr-3 pl-3.5", isCurrentTab ? "text-gray-50" : "text-slate-500")}
+                  className={globalCn(
+                    "flex items-center pr-3 pl-3.5",
+                    isCurrentTab ? "text-gray-50" : "text-slate-500"
+                  )}
                   href={GLOBAL_RECENT_TABS[tab].href}
                 >
                   {GLOBAL_RECENT_TABS[tab].title}

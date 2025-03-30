@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 
-import clsx from "clsx";
+import { globalCn } from "@/utils/cn";
 
 import { Footer } from "./layout/components/Footer";
 import { NavBar } from "./layout/components/NavBar";
@@ -29,9 +29,9 @@ const RootLayout = ({
       <head>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       </head>
-      <body className={clsx(firaCode.className, "min-w-[360px] bg-slate-950")}>
-        <div className="flex h-svh flex-col p-10">
-          <div className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-700 bg-slate-900">
+      <body className={globalCn(firaCode.className, "min-w-[360px] bg-slate-950 sm:min-w-[768px]")}>
+        <div className="flex h-svh flex-col sm:p-5">
+          <div className="flex h-full flex-col overflow-hidden border border-slate-700 bg-slate-900 sm:rounded-lg">
             <NavBar />
             <main className="grow overflow-hidden">{children}</main>
             <Footer />
