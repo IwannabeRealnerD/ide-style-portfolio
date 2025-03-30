@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode, useId } from "react";
 
-import clsx from "clsx";
+import { globalCn } from "@/utils/cn";
 
 interface GlobalCheckBoxProps {
   isChecked: boolean;
@@ -13,7 +13,7 @@ export const GlobalCheckBox: FunctionComponent<GlobalCheckBoxProps> = (props) =>
   const id = useId();
 
   return (
-    <label className={clsx("group flex items-center gap-2 hover:cursor-pointer", props.className)} htmlFor={id}>
+    <label className={globalCn("group flex items-center gap-2 hover:cursor-pointer", props.className)} htmlFor={id}>
       <input
         checked={props.isChecked}
         className="peer hidden"
@@ -22,7 +22,7 @@ export const GlobalCheckBox: FunctionComponent<GlobalCheckBoxProps> = (props) =>
         onChange={() => props.onChange()}
       />
       <div
-        className={clsx("relative h-4.5 w-4.5 cursor-pointer rounded-xs border border-slate-500", {
+        className={globalCn("relative h-4.5 w-4.5 cursor-pointer rounded-xs border border-slate-500", {
           "after:border-r-0.25 after:border-b-0.25 after:absolute after:top-0.75 after:left-1.5 after:h-2.25 after:w-1 after:rotate-45 after:border after:border-t-0 after:border-l-0 after:border-white after:content-['']":
             props.isChecked,
           "bg-slate-500": props.isChecked,

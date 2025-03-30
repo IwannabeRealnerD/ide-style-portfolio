@@ -3,9 +3,10 @@
 import { FunctionComponent } from "react";
 import { usePathname } from "next/navigation";
 
-import clsx from "clsx";
 import { RiFile2Fill, RiFolder3Fill, RiFolderOpenFill } from "react-icons/ri";
 import { VscChevronDown, VscChevronRight } from "react-icons/vsc";
+
+import { globalCn } from "@/utils/cn";
 
 import { MenuLink } from "../components/MenuLink";
 
@@ -37,7 +38,7 @@ export const DirectoryPart: FunctionComponent<DirectoryPartProps> = (props) => {
             <RiFolder3Fill className="size-4 shrink-0 text-teal-400" />
           </>
         )}
-        <p className={clsx("text-base", isDirectoryActive ? "text-gray-50" : "text-slate-500")}>
+        <p className={globalCn("text-base", isDirectoryActive ? "text-gray-50" : "text-slate-500")}>
           {props.directoryName}
         </p>
       </button>

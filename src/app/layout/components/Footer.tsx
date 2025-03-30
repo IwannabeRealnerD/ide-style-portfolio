@@ -8,7 +8,7 @@ export const Footer = () => {
           <p className="text-base font-normal text-slate-400">find me in:</p>
         </div>
         <a
-          className="flex w-14 items-center justify-center border-r border-slate-700"
+          className="flex items-center justify-center border-r border-slate-700 p-4"
           href="https://x.com/WannabeRealnerD"
           rel="noopener noreferrer"
           target="_blank"
@@ -18,12 +18,12 @@ export const Footer = () => {
       </div>
       <div className="flex border-l border-slate-700">
         <a
-          className="flex items-center justify-center gap-1.5 border-r border-slate-700 px-6 text-slate-400"
+          className="flex items-center justify-center gap-1.5 border-r border-slate-700 p-4 text-slate-400"
           href="https://github.com/IwannabeRealnerD"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <p>@IwannabeRealnerD</p>
+          <p className="hidden sm:block">@IwannabeRealnerD</p>
           <RiGithubFill className="size-4.5" />
         </a>
       </div>
